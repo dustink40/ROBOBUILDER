@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
-import bidbotLogo from '../assets/bidbot-logo.png';
+import conexLogo from '../assets/conex-logo.png';
 
 const Home = () => {
   const [userInput, setUserInput] = useState("");
@@ -34,28 +34,28 @@ const callGenerateEndpoint = async () => {
   return (
     <div className="root">
       <Head>
-        <title>BID-BOT | buildspace</title>
+        <title>ROBOBUILDER| buildspace</title>
       </Head>
       <div className="container">
         <div className="header">
           <div className="header-title">
-            <h1>BID-BOT: Precision Bidding and Accurate Estimates</h1>
+            <h1>ROBOBUILDER: Automated Construction Assistant</h1>
           </div>
           <div className="header-subtitle">
-            <h2>BID-BOT: Precision Bidding and Accurate Estimates</h2>
+            <h2>BID-BOT: Efficiently automate your construction projects with our robotic assistant</h2>
           </div>
         </div>
         {/* Add this code here*/}
         <div className="prompt-container">
           <textarea
             className="prompt-box"
-            placeholder="Hello I am BID-BOT, lets make a bid"
+            placeholder="Hello I am ROBOBUILDER, lets build something together"
             value={userInput}
             onChange={onUserChangedText}
           />
           {/* added logo image here*/}
           <div classname="logo-container">
-            <Image src={bidbotLogo} alt="Your logo" />
+            <Image src={conexLogo} alt="Your logo" />
           </div>
           {/* new code i added here */}
           <div className="prompt-buttons">
@@ -73,7 +73,7 @@ const callGenerateEndpoint = async () => {
           <div className="output">
             <div className="output-header-container">
               <div className="output-header">
-                <h3>Estimate</h3>
+                <h3>Answer</h3>
               </div>
             </div>
             <div className="output-content">
@@ -87,7 +87,7 @@ const callGenerateEndpoint = async () => {
         <a
           href="https://buildspace.so/builds/ai-writer" target="_blank" rel="noreferrer">
             <div className="badge">
-            <Image src={bidbotLogo} class="balls" alt="Your logo" />
+            <Image src={conexLogo} class="balls" alt="Your logo" />
             <p>build with buildspace</p>
           </div>
         </a>
